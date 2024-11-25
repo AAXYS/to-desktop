@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+      <!-- navbar -->
+      <nav class="w-full h-[10vh] flex items-center justify-between px-5">
+        <div class="l-nav flex items-center justify-center gap-2">
+          <img
+            class=""
+            src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/todesktop-logo.bn2Qe8sb.png"
+            alt=""
+            width="55px"
+          />
+          <h2 class="font-bold font-sans text-[17px] text-slate-800">
+            ToDesktop
+          </h2>
+        </div>
+        <div class="m-nav md:flex items-center gap-14 hidden">
+          <h2
+            class="font-bold font-sans text-base text-slate-800 hover:text-blue-500"
+          >
+            Pricing
+          </h2>
+          <h2
+            class="font-bold font-sans text-base text-slate-800 hover:text-blue-500"
+          >
+            Docs
+          </h2>
+          <h2
+            class="font-bold font-sans text-base text-slate-800 hover:text-blue-500"
+          >
+            Changelog
+          </h2>
+          <h2
+            class="font-bold font-sans text-base text-slate-800 hover:text-blue-500"
+          >
+            Blog
+          </h2>
+          <h2
+            class="font-bold font-sans text-base text-slate-800 hover:text-blue-500"
+          >
+            Login
+          </h2>
+        </div>
+        <div class="r-nav l-nav md:flex items-center gap-7 hidden">
+          <i
+            class="fa-solid fa-rotate-right text-xl text-slate-800 hidden md:flex"
+          ></i>
+          <i
+            class="fa-solid fa-cart-shopping text-xl text-slate-800 hidden md:flex"
+          ></i>
+          <i class="fa-regular fa-user text-xl text-slate-800 hidden md:flex"></i>
+        </div>
+        <div class="md:hidden" onclick="handleMenu()">
+          <i class="fa-solid fa-bars text-2xl text-slate-800 flex md:hidden"></i>
+        </div>
+  
+        <div id="dialog" class="fixed bg-slate-50 inset-0 z-20 hidden lg:hidden">
+          <nav
+            class="w-full h-[12vh] flex bg-white items-center justify-between px-5"
+          >
+            <div class="l-nav flex items-center gap-3">
+              <img
+                class=""
+                src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/todesktop-logo.bn2Qe8sb.png"
+                alt=""
+                width="55px"
+              />
+              <h2 class="font-bold font-sans text-xl text-slate-800">
+                ToDesktop
+              </h2>
+            </div>
+            <div class="md:hidden" onclick="handleMenu()">
+              <i
+                class="fa-solid fa-xmark text-2xl text-slate-800 flex md:hidden"
+              ></i>
+            </div>
+          </nav>
+          <div class="flex items-start flex-col px-2 py-2">
+            <h2
+              class="font-semibold font-sans text-2xl text-slate-800 py-2 px-3 hover:bg-slate-100 w-full rounded-lg"
+            >
+              Pricing
+            </h2>
+            <h2
+              class="font-semibold font-sans text-2xl text-slate-800 py-2 px-3 hover:bg-slate-100 w-full rounded-lg"
+            >
+              Docs
+            </h2>
+            <h2
+              class="font-semibold font-sans text-2xl text-slate-800 py-2 px-3 hover:bg-slate-100 w-full rounded-lg"
+            >
+              Changelog
+            </h2>
+            <h2
+              class="font-semibold font-sans text-2xl text-slate-800 py-2 px-3 hover:bg-slate-100 w-full rounded-lg"
+            >
+              Blog
+            </h2>
+            <h2
+              class="font-semibold font-sans text-2xl text-slate-800 py-2 px-3 hover:bg-slate-100 w-full rounded-lg"
+            >
+              Login
+            </h2>
+            <div class="h-[1px] w-full bg-slate-50 mt-4"></div>
+            <button
+              class="flex items-center gap-4 py-2 px-3 hover:bg-slate-100 w-full rounded-lg mt-4"
+            >
+              <i class="fa-solid fa-cart-shopping text-2xl text-slate-800"></i>
+              <h2 class="font-semibold font-sans text-2xl text-slate-800">
+                Check the Cart
+              </h2>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- main01 home page-->
+      <div
+        class="main w-full h-full bg-gradient-to-b from-blue-50 via-orange-50 to-transparent"
+      >
+        <div
+          id="main01"
+          class="max-w-4xl mx-auto flex flex-col items-center justify-center py-2 px-4 md:py-10"
+        >
+          <div
+            id="mdiv1"
+            class="mr-[70%] mt-[30px] hover:drop-shadow-md flex items-center justify-center drop-shadow gap-2 rounded-[10px] text-amber-900 bg-yellow-100 border-[1px] border-yellow-200 px-3 py-1 md:mr-0 group duration-300 hover:-translate-y-1"
+          >
+            <i class="fa-solid fa-check"></i>
+            <p class="font-bold">vO.24.1</p>
+            <i
+              class="group-hover:translate-x-1 duration-300 fa-solid fa-arrow-right"
+            ></i>
+          </div>
+          <div id="mdiv2" class="md:flex items-center gap-6 hidden mt-12">
+            <div
+              id="one"
+              class="flex items-center justify-center gap-3 text-gray-500"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2>Code optional</h2>
+            </div>
+            <div
+              id="two"
+              class="flex items-center justify-center gap-3 text-gray-500"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2>Drag & drop builder</h2>
+            </div>
+            <div
+              id="three"
+              class="flex items-center justify-center gap-3 text-gray-500"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2>Windows, Mac, Linux</h2>
+            </div>
+          </div>
+          <div
+            id="mdiv3"
+            class="font-sans md:w-[80%] font-bold md:text-center md:text-[72px] text-[58px] leading-[70px] my-6"
+          >
+            <p>Web app to desktop app in minutes</p>
+          </div>
+          <div
+            id="mdiv4"
+            class="text-xl font-sans md:w-[70%] md:text-center md:text-[23px] leading-[25px] mt-[2%] text-gray-500 mb-8 font-medium"
+          >
+            <p>
+              Take your web app codebase and transform it into a cross platform
+              desktop app with native functionality.
+            </p>
+          </div>
+          <div
+            id="mdiv5"
+            class="flex md:flex-row flex-col items-center justify-center gap-3 py-5"
+          >
+            <button
+              class="bg-blue-700 py-3 px-36 md:px-4 rounded-md hover:bg-blue-600"
+            >
+              <p
+                class="text-gray-100 font-medium font-sans text-center text-[20px]"
+              >
+                Download now
+              </p>
+            </button>
+            <button
+              class="bg-slate-50 border-[1px] border-solid border-zinc-300 py-3 px-40 md:px-5 rounded-md flex hover:border-zinc-400"
+            >
+              <p
+                class="text-gray-800 font-medium font-sans text-center text-[20px]"
+              >
+                Read docs
+              </p>
+            </button>
+          </div>
+        </div>
+        <div
+          class="mx-20 mt-20 mb-6 gap-4 flex items-center justify-center md:gap-5 text-gray-800 md:text-[17px] uppercase font-semibold md:mx-[35%] md:mt-0 md:mb-8"
+        >
+          <i class="fa-solid fa-arrow-turn-down"></i>
+          <h2>Apps powered by ToDesktop</h2>
+          <i class="fa-solid fa-arrow-turn-down"></i>
+        </div>
+      </div>
+      <!-- main02 multiple div-->
+      <div
+        id="main02"
+        class="main w-full h-[55vh] md:h-[44vh] flex flex-col items-center justify-between overflow-hidden"
+      >
+        <div
+          id="line01"
+          class="-translate-x-24 mdiv1 h-[17vh] md:h-[22vh] w-full flex items-center justify-center gap-3"
+        >
+          <div
+            class="min-w-24 min-h-24 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Superpowered.tHC_RfpU.png"
+              alt=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[16px] text-black">
+              SuperPower
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-LifeAt.-Gg__Z7j.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              LifeAt
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Cal.tNj98lGU.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Cal.com
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Campsite.zLN9hc3H.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              campsite
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-NotionCalendar.RC5iC-Ww.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Notioncalender
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Voiceflow.VziEVPjD.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              VoiceFlow
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Moises.AiW9adgp.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Moises
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Bento.sWc6My29.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Bento
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Slite.CUJ2gxTv.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[16px] text-black">
+              Slite
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Conjure.cRVPwZgu.png"
+              alt=""
+              width="80px"
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Conjure
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Typefully.4TRxK4Xu.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Typefully
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Basedash.3zVpqFz2.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Basedash
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Webstudio.zTfi1fj8.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Webstudio
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Linear.BJ6nQ1Yg.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Linear
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Morgen.T902B6yE.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Morgan
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Rise._nYytet0.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Rise
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Beeper.vXFMsQ7M.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Beeper
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Sunsama.sysR-7s-.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Sunsama
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Convy.-nvozOOU.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Convey
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-ClickUp.plcdS9Wy.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Clickup
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Modyfi.XB7uNI0T.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Modify
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-ReadyRunner.E1mlS2ng.png"
+              alt=""
+              width="70px"
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              ReadyRunner
+            </h2>
+          </div>
+        </div>
+        <div
+          id="line02"
+          class="translate-x-24 mdiv2 h-[17vh] md:h-[22vh] w-full flex items-center justify-center gap-3"
+        >
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Convy.-nvozOOU.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Convey
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-ClickUp.plcdS9Wy.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Clickup
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Modyfi.XB7uNI0T.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Modify
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-ReadyRunner.E1mlS2ng.png"
+              alt=""
+              width="70px"
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              ReadyRunner
+            </h2>
+          </div>
+          <div
+            class="min-w-24 min-h-24 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Superpowered.tHC_RfpU.png"
+              alt=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[16px] text-black">
+              SuperPower
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-LifeAt.-Gg__Z7j.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              LifeAt
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Cal.tNj98lGU.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Cal.com
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Campsite.zLN9hc3H.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              campsite
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Moises.AiW9adgp.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Moises
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Bento.sWc6My29.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Bento
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Slite.CUJ2gxTv.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[16px] text-black">
+              Slite
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Conjure.cRVPwZgu.png"
+              alt=""
+              width="80px"
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Conjure
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Typefully.4TRxK4Xu.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Typefully
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Basedash.3zVpqFz2.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Basedash
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Webstudio.zTfi1fj8.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Webstudio
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Linear.BJ6nQ1Yg.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Linear
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Morgen.T902B6yE.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Morgan
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Rise._nYytet0.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Rise
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Beeper.vXFMsQ7M.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Beeper
+            </h2>
+          </div>
+        </div>
+        <div
+          id="line03"
+          class="-translate-x-24 mdiv3 md:hidden h-[17vh] md:h-[22vh] w-full flex items-center justify-center gap-3"
+        >
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Convy.-nvozOOU.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Convey
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-ClickUp.plcdS9Wy.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Clickup
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Modyfi.XB7uNI0T.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Modify
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-ReadyRunner.E1mlS2ng.png"
+              alt=""
+              width="70px"
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              ReadyRunner
+            </h2>
+          </div>
+          <div
+            class="min-w-24 min-h-24 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Superpowered.tHC_RfpU.png"
+              alt=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[16px] text-black">
+              SuperPower
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-LifeAt.-Gg__Z7j.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              LifeAt
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Cal.tNj98lGU.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Cal.com
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Campsite.zLN9hc3H.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              campsite
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Moises.AiW9adgp.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Moises
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Bento.sWc6My29.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Bento
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Slite.CUJ2gxTv.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[16px] text-black">
+              Slite
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Conjure.cRVPwZgu.png"
+              alt=""
+              width="80px"
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Conjure
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Typefully.4TRxK4Xu.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Typefully
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Basedash.3zVpqFz2.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Basedash
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Webstudio.zTfi1fj8.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Webstudio
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Linear.BJ6nQ1Yg.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Linear
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Morgen.T902B6yE.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Morgan
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Rise._nYytet0.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Rise
+            </h2>
+          </div>
+          <div
+            class="min-h-24 min-w-24 md:min-w-28 md:min-h-28 flex items-center justify-center flex-col bg-slate-200 rounded-xl border-[1px] border-solid border-gray-400"
+          >
+            <img
+              class="w-12 h-12 md:w-16 md:h-16"
+              src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Beeper.vXFMsQ7M.png"
+              alt=""
+              width=""
+            />
+            <h2 class="font-bold font-sans text-[12px] md:text-[17px] text-black">
+              Beeper
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!-- main03 -->
+      <div class="main md:px-8 md:py-24 px-5 py-16">
+        <!-- video -->
+        <div class="">
+          <img
+            class="rounded-[15px]"
+            src="https://www.todesktop.com/cdn-cgi/image/width=1080,f=auto,fit=cover/_app/immutable/assets/bg.aoz_pWI8.jpg"
+            alt=""
+            width="100%"
+          />
+          <img
+            class="video my-[-44%] mx-[23%] md:mx-[22%] md:my-[-44%] absolute bg-white rounded-md drop-shadow-xl"
+            src="https://www.todesktop.com/cdn-cgi/image/width=1920,height=1493,f=auto,fit=cover/_app/immutable/assets/ui-window-transparent.CAy5AFJF.png"
+            alt=""
+            width="50%"
+          />
+          <button
+            class="videobutton drop-shadow-xl my-[-30%] mx-[15%] md:mx-[32%] md:my-[-28%] absolute bg-[#3238f2] font-bold flex items-center justify-center gap-4 py-3 px-4 text-white bold rounded-md text-base md:text-lg"
+          >
+            <i class="fa-solid fa-circle-play"></i>
+            <p class="md:hidden">Build a desktop app in 90 secs</p>
+            <p class="md:flex hidden">Watch: Build a desktop app in 90 secs</p>
+          </button>
+        </div>
+        <!-- step01 -->
+        <div class="mt-20">
+          <p class="text-5xl font-sans font-bold">How it works</p>
+          <div
+            class="bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] mt-10 gap-9 flex-col md:flex-row flex items-center justify-between px-10 py-10 md:py-20"
+          >
+            <div
+              class="flex items-start justify-between flex-col gap-9 w-full md:w-[50%]"
+            >
+              <button
+                class="text-[15px] rounded-[7px] md:text-[19px] text-[#713f12] bg-[#fff6cc] border-[1px] border-[#efe5b7] font-bold px-3 py-[2px]"
+              >
+                step 1
+              </button>
+              <p class="text-4xl md:text-4xl font-sans font-semibold w-[88%]">
+                Bootstrap straight from your web app
+              </p>
+              <p class="font-sans w-[99%] md:w-[95%] text-[18px] md:text-[20px]">
+                Copy and paste your web app url into ToDesktop. Customise your app
+                design, app icon and window frame UI with no code.
+              </p>
+              <div class="flex items-center justify-center gap-8 md:gap-10">
+                <div
+                  class="flex items-start justify-center flex-col gap-5 text-base md:text-lg"
+                >
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Multiple windows</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Menubar/tray menus</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Offline support</h2>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start justify-center flex-col gap-5 text-base md:text-lg"
+                >
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Customisable menus</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Launch on startup</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Tabs (Mac only)</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-50%">
+              <img
+                src="https://www.todesktop.com/cdn-cgi/image/width=828,height=644,f=auto,fit=cover/_app/immutable/assets/ui-window-transparent.CAy5AFJF.png"
+                alt=""
+                width="500px"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- step02 -->
+        <div class="mt-16">
+          <div
+            class="bg-slate-50 border-slate-300 border-solid border-[1px] gap-9 rounded-[15px] mt-10 flex-col md:flex-row flex items-center justify-between px-10 py-10 md:py-20"
+          >
+            <div
+              class="flex items-start justify-between flex-col gap-9 md:w-[50%]"
+            >
+              <button
+                class="text-[15px] rounded-[7px] md:text-[19px] text-[#713f12] bg-[#fff6cc] border-[1px] border-[#efe5b7] font-bold px-3 py-[2px]"
+              >
+                step 2
+              </button>
+              <p class="text-4xl md:text-4xl font-sans font-semibold w-[88%]">
+                Add desktop code to customise your web app
+              </p>
+              <p class="font-sans w-[98%] md:w-[94%] text-[18px] md:text-[20px]">
+                No need to create a new repository, just add code from our desktop
+                APIs to your codebase and get access to system level
+                functionality.
+              </p>
+              <div class="flex items-center justify-center gap-8 md:gap-10">
+                <div
+                  class="flex items-start justify-center flex-col gap-5 text-base md:text-lg"
+                >
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Native notifications</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Application menu</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Dock/Icon</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">File system access</h2>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start justify-center flex-col gap-5 text-base md:text-lg"
+                >
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Global keyboard shortcuts</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Context menu</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Isolated browser views</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">…plus more APIs in our docs</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-50%">
+              <img
+                src="https://www.todesktop.com/cdn-cgi/image/width=828,f=auto,fit=cover/_app/immutable/assets/Customer-Story-ClickUp.6otznAf7.png"
+                alt=""
+                width="500px"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- step03 -->
+        <div class="mt-16">
+          <div
+            class="bg-slate-50 border-slate-300 border-solid border-[1px] gap-9 rounded-[15px] mt-10 flex-col md:flex-row flex items-center justify-between px-10 py-10 md:py-18"
+          >
+            <div
+              class="flex items-start justify-between flex-col gap-9 md:w-[50%]"
+            >
+              <button
+                class="text-[15px] rounded-[7px] md:text-[19px] text-[#713f12] bg-[#fff6cc] border-[1px] border-[#efe5b7] font-bold px-3 py-[2px]"
+              >
+                step 3
+              </button>
+              <p class="text-4xl md:text-4xl font-sans font-semibold w-[88%]">
+                Publish
+              </p>
+              <p class="font-sans w-[98%] md:w-[94%] text-[18px] md:text-[20px]">
+                One-click will publish your desktop app to your customers and give
+                you a download link to put on your website.
+              </p>
+              <div class="flex items-center justify-center gap-8 md:gap-10">
+                <div
+                  class="flex items-start justify-center flex-col gap-5 text-base md:text-lg"
+                >
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Super-fast global CDN</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Magic universal links</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Manage version numbers</h2>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start justify-center flex-col gap-5 text-base md:text-lg"
+                >
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Download links on your domain</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">Download analytics</h2>
+                  </div>
+                  <div class="flex items-center justify-center gap-3 text-black">
+                    <i class="fa-solid fa-check"></i>
+                    <h2 class="underline">…plus more APIs in our docs</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-50%">
+              <img
+                src="https://www.todesktop.com/cdn-cgi/image/width=828,f=auto,fit=cover/_app/immutable/assets/screenshot.2xP1-Xus.png"
+                alt=""
+                width="500px"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- handles -->
+        <div
+          class="w-full md:h-[148vh] mt-28 flex items-center justify-between flex-col"
+        >
+          <!-- top -->
+          <div class="top w-full h-[18vh]">
+            <p class="text-5xl font-sans font-bold md:w-[40%]">
+              ToDesktop handles the details
+            </p>
+          </div>
+          <!-- mid -->
+          <div class="mid w-full py-6 flex items-center justify-between md:flex-row flex-col gap-5">
+            <div
+              class="midleft h-full w-full md:w-[32%] flex flex-col items-center justify-between gap-6"
+            >
+              <div
+                class="w-full py-8 rounded-md flex flex-col items-center justify-center gap-5 bg-slate-50 border-[1px] border-[solid] border-slate-300 hover:bg-gradient-to-br from-[#f5d9d9d4] via-purple-50 to-lime-50"
+              >
+                <p class="text-2xl font-sans font-bold">Native Notifications</p>
+                <img
+                  class="w-72"
+                  src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/notifications@3x.png"
+                  alt=""
+                  width=""
+                />
+              </div>
+  
+              <div
+                class="w-full py-12 rounded-md flex flex-col items-center justify-center gap-5 bg-slate-50 border-[1px] border-[solid] border-slate-300 hover:bg-gradient-to-br from-[#f5d9d9d4] via-purple-50 to-lime-50"
+              >
+                <p class="text-2xl font-sans font-bold">Access to Native APIs</p>
+                <p class="text-[17px] font-sans w-[80%] text-center">
+                  ToDesktop ensures the underlying browser, performance
+                  improvements, security patches and additional features are
+                  always up to date.
+                </p>
+                <img
+                  src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/apis@3x.png"
+                  alt=""
+                  width="300px"
+                />
+              </div>
+            </div>
+  
+            <div
+              class="midmid h-full w-full md:w-[32%] flex flex-col items-center justify-between gap-6"
+            >
+              <div
+                class="w-full py-12 rounded-md flex flex-col items-center justify-center gap-5 bg-slate-50 border-[1px] border-[solid] border-slate-300 hover:bg-gradient-to-br from-[#f5d9d9d4] via-purple-50 to-lime-50"
+              >
+                <p class="text-2xl font-sans font-bold">Auto Updates</p>
+                <p class="text-[17px] font-sans w-[80%] text-center">
+                  We will ensure the underlying browser is up to date and deliver
+                  performance improvements, security patches, & additional
+                  features.
+                </p>
+                <img
+                  src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/auto-updates@3x.png"
+                  alt=""
+                  width="300px"
+                />
+              </div>
+  
+              <div
+                class="w-full py-8 rounded-md flex flex-col items-center justify-center gap-5 bg-slate-50 border-[1px] border-[solid] border-slate-300 hover:bg-gradient-to-br from-[#f5d9d9d4] via-purple-50 to-lime-50"
+              >
+                <p class="text-2xl font-sans font-bold">
+                  Customizable look and feel
+                </p>
+                <img
+                  src="https://www.todesktop.com/cdn-cgi/image/width=640,height=210,f=auto,fit=cover/feature-images/look-and-feel@3x.png"
+                  alt=""
+                  width="300px"
+                />
+              </div>
+            </div>
+  
+            <div
+              class="midright w-full md:w-[32%] h-full flex flex-col items-center justify-between gap-6"
+            >
+              <div
+                class="w-full py-8 rounded-md flex flex-col items-center justify-center gap-5 bg-slate-50 border-[1px] border-[solid] border-slate-300 hover:bg-gradient-to-br from-[#f5d9d9d4] via-purple-50 to-lime-50"
+              >
+                <p class="text-2xl font-sans font-bold">Plugins</p>
+                <img
+                  src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/plugins@3x.png"
+                  alt=""
+                  width="300px"
+                />
+              </div>
+  
+              <div
+                class="w-full py-12 rounded-md flex flex-col items-center justify-center gap-5 bg-slate-50 border-[1px] border-[solid] border-slate-300 hover:bg-gradient-to-br from-[#f5d9d9d4] via-purple-50 to-lime-50"
+              >
+                <p class="text-2xl font-sans font-bold">Native Installers</p>
+                <p class="text-[17px] font-sans w-[80%] text-center">
+                  We even provide a magic link which will detect your users
+                  operating system & download the most up to date version of your
+                  app.
+                </p>
+                <img
+                  src="https://www.todesktop.com/cdn-cgi/image/width=640,height=176,f=auto,fit=cover/feature-images/installers@3x.png"
+                  alt=""
+                  width="300px"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- bottom -->
+          <div
+            class="bottom w-full h-[18vh] bg-slate-50 rounded-md border-[1px] text-nowrap border-[solid] border-slate-300 overflow-hidden flex items-center justify-center"
+          >
+            <div
+              class="names font-sans font-bold text-2xl gap-[60px] flex items-center justify-center"
+            >
+              <li>Global Hotkeys</li>
+              <li>Download Analytics</li>
+              <li>Custom Menus</li>
+              <li>Multi-window support</li>
+              <li>Global Hotkeys</li>
+              <li>Download Analytics</li>
+              <li>Custom Menus</li>
+              <li>Multi-window support</li>
+              <li>Global Hotkeys</li>
+              <li>Download Analytics</li>
+              <li>Custom Menus</li>
+              <li>Multi-window support</li>
+              <li>Global Hotkeys</li>
+              <li>Download Analytics</li>
+              <li>Custom Menus</li>
+              <li>Multi-window support</li>
+            </div>
+          </div>
+        </div>
+        <!-- stories -->
+        <div class="mt-20">
+          <p class="text-5xl font-sans font-bold">Customer stories</p>
+          <div
+            class="bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] mt-10 flex-col md:flex-row flex items-center justify-between px-10 py-10 md:py-14"
+          >
+            <div
+              class="flex items-start justify-between flex-col gap-9 w-full md:w-[50%]"
+            >
+              <img
+                src="https://www.todesktop.com/_app/immutable/assets/ClickUp-Logo.odzVA-s0.svg"
+                alt=""
+                width="200px"
+              />
+              <p class="text-2xl md:text-xl font-sans font-semibold w-[88%]">
+                ClickUp used ToDesktop to get their desktop app in front of
+                customers in days instead of months.
+              </p>
+              <p
+                class="font-sans w-[99%] md:w-[95%] text-[18px] md:text-[20px] text-slate-500"
+              >
+                “ToDesktop provided us with a polished
+                <span class="text-slate-950">desktop app</span> in no time. Their
+                expert team guided us through
+                <span class="text-slate-950"
+                  >a smooth migration from our outdated legacy </span
+                >desktop app, enabling us to deliver new and improved features to
+                our customers within days.”
+              </p>
+            </div>
+            <div class="w-50%">
+              <img
+                class="md:ml-[131px] md:-mb-14"
+                src="https://www.todesktop.com/cdn-cgi/image/width=1920,f=auto,fit=cover/_app/immutable/assets/Customer-Story-ClickUp.6otznAf7.png"
+                alt=""
+                width="500px"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- feedback -->
+        <div
+          class="w-full flex items-center justify-center gap-5 flex-col md:flex-row mt-14"
+        >
+          <div
+            class="w-full md:w-[33%] bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] flex items-start justify-center flex-col gap-5 px-8 py-5 hover:bg-gradient-to-br from-[#f5d9d9d4] via-purple-50 to-lime-50"
+          >
+            <img
+              src="https://www.todesktop.com/cdn-cgi/image/width=88,height=88,f=auto,fit=cover/_app/immutable/assets/customer-logo-Linear.BJ6nQ1Yg.png"
+              alt=""
+              width="50px"
+            />
+            <p class="text-xl font-sans font-bold">Native APIs</p>
+            <p class="font-sans w-[95%] text-[12px] md:text-[18px]">
+              “What sets ToDesktop apart is its seamless integration with native
+              APIs using our existing web codebase. By tapping into APIs like Tray
+              and Notifications, we've crafted an exceptionally polished desktop
+              user experience.”
+            </p>
+            <div class="flex items-center justify-center gap-3">
+              <img
+                class="rounded-full"
+                src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/Rick.d7xHnafE.jpg"
+                alt=""
+                width="50px"
+              />
+              <div>
+                <p class="text-lg font-sans font-semibold">Rick Pastoor</p>
+                <p class="text-lg font-sans font-semibold text-slate-400">Rise</p>
+              </div>
+            </div>
+          </div>
+  
+          <div
+            class="w-full md:w-[33%] bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] flex items-start justify-center flex-col gap-7 px-8 py-8 hover:bg-gradient-to-br from-[#f5d9d9d4] via-purple-50 to-lime-50"
+          >
+            <img
+              src="https://www.todesktop.com/cdn-cgi/image/width=88,height=88,f=auto,fit=cover/_app/immutable/assets/customer-logo-Linear.BJ6nQ1Yg.png"
+              alt=""
+              width="50px"
+            />
+            <p class="text-xl font-sans font-bold">Cleaner, less cluttered UI</p>
+            <p class="font-sans w-[95%] text-[12px] md:text-[18px]">
+              “Having a desktop app gives us the freedom to design the experience
+              we want, including better keyboard shortcuts and a cleaner UI. It
+              was a no-brainer for us to use ToDesktop.”
+            </p>
+            <div class="flex items-center justify-center gap-3">
+              <img
+                class="rounded-full"
+                src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/Max.V2rqrzg6.jpg"
+                alt=""
+                width="50px"
+              />
+              <div>
+                <p class="text-lg font-sans font-semibold">Max Musing</p>
+                <p class="text-lg font-sans font-semibold text-slate-400">
+                  Basedash
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div
+            class="w-full md:w-[33%] bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] flex items-start justify-center flex-col gap-5 px-8 py-5 hover:bg-gradient-to-br from-[#f5d9d9d4] via-purple-50 to-lime-50"
+          >
+            <img
+              src="https://www.todesktop.com/cdn-cgi/image/width=88,height=88,f=auto,fit=cover/_app/immutable/assets/customer-logo-Linear.BJ6nQ1Yg.png"
+              alt=""
+              width="50px"
+            />
+            <p class="text-xl font-sans font-bold">Code optional</p>
+            <p class="font-sans w-[95%] text-[12px] md:text-[18px]">
+              “It was unbelievably simple for us to get a desktop app up and
+              running, and we didn’t have to write a single line of code. Once we
+              had this MVP, we were able to extend the app’s functionality with
+              custom behavior using ToDesktop’s libraries. ”
+            </p>
+            <div class="flex items-center justify-center gap-3">
+              <img
+                class="rounded-full"
+                src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/Pouya.Q0zAbZRS.jpg"
+                alt=""
+                width="50px"
+              />
+              <div>
+                <p class="text-lg font-sans font-semibold">pouya rad</p>
+                <p class="text-lg font-sans font-semibold text-slate-400">
+                  Life At
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- black01 -->
+        <div class="mt-16 text-white">
+          <div
+            class="bg-black border-slate-300 border-solid border-[1px] rounded-[15px] mt-10 flex-col md:flex-row flex items-center justify-between px-10 py-10 md:py-18"
+          >
+            <div
+              class="flex items-start justify-between flex-col gap-9 md:w-[50%]"
+            >
+              <p class="text-lg font-sans font-bold uppercase">
+                Ready to start building up
+              </p>
+              <p class="text-4xl md:text-5xl font-sans font-semibold w-[70%]">
+                Create your desktop app for free*
+              </p>
+              <p class="font-sans w-[98%] md:w-[94%] text-[18px] md:text-[15px]">
+                ToDesktop Builder will take you step-by-step through the process
+                of creating your first desktop app in just a few minutes.
+              </p>
+            </div>
+            <div class="w-50%">
+              <img
+                src="https://www.todesktop.com/cdn-cgi/image/width=828,f=auto,fit=cover/_app/immutable/assets/screenshot.2xP1-Xus.png"
+                alt=""
+                width="500px"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- package -->
+        <div
+          class="w-full flex items-center justify-between flex-col md:flex-row mt-28 gap-8"
+        >
+          <p class="text-5xl md:text-5xl font-sans font-bold w-full md:w-[45%]">
+            Choose a plan that fits your needs
+          </p>
+          <div
+            class="bg-slate-200 border-[1px] border-solid border-slate-300 rounded-md flex items-center justify-between w-full md:w-[30%] h-14 px-2 gap-2"
+          >
+            <div
+              class="font-bold text-lg flex items-center justify-center w-[50%] bg-slate-50 h-12 rounded-md"
+            >
+              Monthly
+            </div>
+            <div
+              class="gap-3 font-bold text-lg flex items-center justify-center w-[50%] bg-slate-50 h-12 rounded-md"
+            >
+              <p>Yearly</p>
+              <button class="font-bold rounded-2xl text-white bg-[#3238f2] px-3">
+                20%
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- deals -->
+        <div
+          class="w-full flex items-center justify-between mt-12 flex-col md:flex-row gap-5"
+        >
+        <div class="md:w-[32%] w-full h-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] flex items-start justify-center flex-col gap-4 px-7 py-5">
+          <p class="text-[33px] font-sans font-bold">Free</p>
+          <p class="font-sans w-[95%] text-[12px] md:text-[18px] text-gray-500">
+            For personal use or testing your app before deploying to customers.
+          </p>
+          <p class="text-lg font-sans font-bold uppercase">key feature</p>
+          <div
+            class="flex items-center justify-center gap-3 text-black text-[18px]"
+          >
+            <i class="fa-solid fa-check"></i>
+            <h2 class="underline">Free for personal use</h2>
+          </div>
+          <div
+            class="flex items-center justify-center gap-3 text-black text-[18px]"
+          >
+            <i class="fa-solid fa-check"></i>
+            <h2 class="underline">Run app locally</h2>
+          </div>
+          <div
+            class="flex items-center justify-center gap-3 text-black text-[18px]"
+          >
+            <i class="fa-solid fa-xmark"></i>
+            <h2 class="underline">No Code Signing</h2>
+          </div>
+          <div
+            class="flex items-center justify-center gap-3 text-black text-[18px]"
+          >
+            <i class="fa-solid fa-xmark"></i>
+            <h2 class="underline">No Native Installers</h2>
+          </div>
+          <button
+            class="flex items-center text-[#3238f2] font-bold rounded-md border-slate-300 border-solid border-[1px] text-[23px] py-2 px-24"
+          >
+            Get Started
+          </button>
+        </div>
+          <div class="md:w-[32%] w-full h-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] flex items-start justify-center flex-col gap-5 px-7 py-5">
+            <p class="text-[33px] font-sans font-bold">Essential</p>
+            <p class="font-sans w-[95%] text-[12px] md:text-[18px] text-gray-500">
+              For simple desktop apps.
+            </p>
+            <p class="text-lg font-sans font-bold uppercase">key feature</p>
+            <div
+              class="flex items-center justify-center gap-3 text-black text-[18px]"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2 class="underline">Windows, Mac & Linux</h2>
+            </div>
+            <div
+              class="flex items-center justify-center gap-3 text-black text-[18px]"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2 class="underline">Code Signing</h2>
+            </div>
+            <div
+              class="flex items-center justify-center gap-3 text-black text-[18px]"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2 class="underline">Native Installers</h2>
+            </div>
+            <div
+              class="flex items-center justify-center gap-3 text-black text-[18px]"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2 class="underline">Email/chat support</h2>
+            </div>
+            <button
+              class="flex items-center text-[#3238f2] font-bold rounded-md border-slate-300 border-solid border-[1px] text-[23px] py-2 px-24"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="md:w-[32%] w-full h-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] flex items-start justify-center flex-col gap-5 px-7 py-5">
+            <p class="text-[33px] font-sans font-bold">Professional</p>
+            <p class="font-sans w-[95%] text-[12px] md:text-[18px] text-gray-500">
+              For sophisticated desktop apps.
+            </p>
+            <p class="text-lg font-sans font-bold uppercase">
+              Everything in Essential Plus
+            </p>
+            <div
+              class="flex items-center justify-center gap-3 text-black text-[18px]"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2 class="underline">Branded Download links</h2>
+            </div>
+            <div
+              class="flex items-center justify-center gap-3 text-black text-[18px]"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2 class="underline">Analytics</h2>
+            </div>
+            <div
+              class="flex items-center justify-center gap-3 text-black text-[18px]"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2 class="underline">NAccess to Plugins</h2>
+            </div>
+            <div
+              class="flex items-center justify-center gap-3 text-black text-[18px]"
+            >
+              <i class="fa-solid fa-check"></i>
+              <h2 class="underline">Access to restricted API</h2>
+            </div>
+            <button
+              class="flex items-center text-white font-bold rounded-md bg-[#3238f2] border-slate-300 border-solid border-[1px] text-[23px] py-2 px-24"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+        <!-- black02 -->
+        <div class="mt-16 text-white">
+          <div
+            class="bg-black border-slate-300 border-solid border-[1px] rounded-[15px] mt-10 flex-col md:flex-row flex items-center justify-between px-10 py-10 md:py-18"
+          >
+            <div
+              class="flex items-start justify-between flex-col gap-5 md:w-[50%]"
+            >
+              <p class="text-lg font-sans font-bold uppercase">
+                Dedicated support and expert guidance.
+              </p>
+              <p class="text-4xl md:text-5xl font-sans font-semibold w-[70%]">
+                Enterprise
+              </p>
+              <div
+                class="flex items-center justify-center gap-3 text-white text-[20px]"
+              >
+                <i class="fa-solid fa-check"></i>
+                <h2>Whiteglove onboarding</h2>
+              </div>
+              <div
+                class="flex items-center justify-center gap-3 text-white text-[20px]"
+              >
+                <i class="fa-solid fa-check"></i>
+                <h2>Priority support</h2>
+              </div>
+              <div
+                class="flex items-center justify-center gap-3 text-white text-[20px]"
+              >
+                <i class="fa-solid fa-check"></i>
+                <h2>Dedicated account manager</h2>
+              </div>
+            </div>
+            <div class="w-50%">
+              <img
+                src="https://www.todesktop.com/cdn-cgi/image/width=828,f=auto,fit=cover/_app/immutable/assets/screenshot.2xP1-Xus.png"
+                alt=""
+                width="300px"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- query -->
+        <div class="mt-20 flex items-start justify-center flex-col gap-4">
+          <p class="text-5xl font-sans font-bold">FAQs</p>
+          <div
+            class="w-full flex items-center justify-center md:flex-row flex-col gap-3"
+          >
+            <div
+              class="flex items-start justify-between flex-col gap-3 w-full md:w-[50%]"
+            >
+              <div
+                class="w-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] text-[20px] font-bold flex items-center justify-between px-3 py-5"
+              >
+                <p>Is Desktop is for me?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div
+                class="w-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] text-[20px] font-bold flex items-center justify-between px-3 py-5"
+              >
+                <p>Can I try ToDesktop without buying?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div
+                class="w-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] text-[20px] font-bold flex items-center justify-between px-3 py-5"
+              >
+                <p>Do you collect or store data about my customers?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div
+                class="w-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] text-[20px] font-bold flex items-center justify-between px-3 py-5"
+              >
+                <p>Does ToDesktop work with sites built with ___?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+  
+            <div
+              class="flex items-start justify-between flex-col gap-3 w-full md:w-[50%]"
+            >
+              <div
+                class="w-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] text-[20px] font-bold flex items-center justify-between px-3 py-5"
+              >
+                <p>Will my app work offline?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div
+                class="w-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] text-[20px] font-bold flex items-center justify-between px-3 py-5"
+              >
+                <p>Which version of Electron/Chromium is used?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div
+                class="w-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] text-[20px] font-bold flex items-center justify-between px-3 py-5"
+              >
+                <p>What support do you offer?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div
+                class="w-full bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] text-[20px] font-bold flex items-center justify-between px-3 py-5"
+              >
+                <p>How does my app get updated?</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer -->
+        <div
+          class="w-full flex items-center justify-between bg-slate-50 border-slate-300 border-solid border-[1px] rounded-[15px] px-6 py-8 mt-16"
+        >
+          <div class="flex items-center justify-center gap-2">
+            <img
+              class=""
+              src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/todesktop-logo.bn2Qe8sb.png"
+              alt=""
+              width="55px"
+            />
+            <h2 class="font-bold font-sans text-[17px] text-slate-800">
+              ToDesktop
+            </h2>
+          </div>
+          <div class="flex items-center justify-center gap-5">
+            <h2 class="font-bold font-sans text-[17px] text-slate-400">
+              documentation
+            </h2>
+            <i
+              class="text-[17px] text-slate-400 fa-solid fa-circle-chevron-down"
+            ></i>
+            <i
+              class="text-[17px] text-slate-400 fa-solid fa-arrows-up-down-left-right"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+      <script src="script.js"></script>
+  </body>
+</html>
